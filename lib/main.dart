@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ChangeNotifierProvider(
-        create: (_) => ChartViewModel(PriceRepositoryImpl()),
+        create: (_) => ChartViewModel(MockPriceRepositoryImpl()),
         child: const ChartScreen(),
       ),
     );

@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:chart_exam/domain/model/price.dart';
 import 'package:chart_exam/domain/repository/price_repository.dart';
 
-class PriceRepositoryImpl implements PriceRepository {
+class MockPriceRepositoryImpl implements PriceRepository {
 
   final _eventController = StreamController<List<Price>>();
 
   @override
   Stream<List<Price>> get pricesStream => _eventController.stream;
 
-  PriceRepositoryImpl() {
+  MockPriceRepositoryImpl() {
     init();
   }
 
