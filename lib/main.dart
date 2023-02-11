@@ -1,3 +1,4 @@
+import 'package:chart_exam/data/repository/mock_price_repository_impl.dart';
 import 'package:chart_exam/data/repository/price_repository_impl.dart';
 import 'package:chart_exam/presentation/chart_screen.dart';
 import 'package:chart_exam/presentation/chart_view_model.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ChangeNotifierProvider(
-        create: (_) => ChartViewModel(MockPriceRepositoryImpl()),
+        create: (_) => ChartViewModel(PriceRepositoryImpl()),
         child: const ChartScreen(),
       ),
     );

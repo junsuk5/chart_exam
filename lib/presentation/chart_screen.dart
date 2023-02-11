@@ -13,16 +13,14 @@ class ChartScreen extends StatelessWidget {
 
     return Scaffold(
       body: Center(
-        child: Container(
-          child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            series: [
-              LineSeries<Price, String>(
-                  dataSource: viewModel.prices,
-                  xValueMapper: (Price price, _) => price.time,
-                  yValueMapper: (Price price, _) => price.closePrice),
-            ],
-          ),
+        child: SfCartesianChart(
+          primaryXAxis: CategoryAxis(),
+          series: [
+            LineSeries<Price, String>(
+                dataSource: viewModel.prices,
+                xValueMapper: (Price price, _) => price.time,
+                yValueMapper: (Price price, _) => price.closePrice),
+          ],
         ),
       ),
     );
